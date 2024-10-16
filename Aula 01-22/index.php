@@ -1,7 +1,6 @@
 <?php
 //Arquivo responsavel pela inicialização do sistema
 //declare(strict_types = 1); faz com que tipos de varias diferentes das declaradas não sejam aceitas por outros tipos!
-include_once 'sistemas/configuracao.php';
 include_once 'helpers.php';
 
 $texto = ' texto para resumir vindo uma variavel ';
