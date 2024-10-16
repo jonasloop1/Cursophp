@@ -4,16 +4,18 @@
 include_once 'sistemas/configuracao.php';
 include_once 'helpers.php';
 
-$texto = 'texto para resumir vindo uma variavel';
+$texto = ' texto para resumir vindo uma variavel ';
 
-$string = 'TEXTO';
-$int = 01;
-$float = 3.3;
-$bool = true;
-$nulo = null; // diferente de uma string VAZIA 
+echo $total = mb_strlen(trim($texto)); // strle:conta quantidade de caractes. trim:limpa espaços em branco de uma String
+echo ': Quantidade de caracteres dessa String!';
+echo '<hr>';
+echo $resumo = mb_substr($texto, 1, 13); // corta a String definida pelo usuario.
+echo '<hr>';
 
-var_dump($texto); // Serve para debugar uma variavel, classe, funcão ou objeto... 
-echo '<hr>';
-echo saudacao();
-echo '<hr>';
+//$nulo = null; // diferente de uma string VAZIA 
+
+//var_dump($texto); // Serve para debugar uma variavel, classe, funcão ou objeto... 
+//echo '<hr>';
+//echo saudacao();
+//echo '<hr>';
 echo resumirTexto($texto, 10);

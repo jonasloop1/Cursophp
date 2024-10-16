@@ -2,8 +2,7 @@
 
 function saudacao(): string
 {
-    $hora = 6;
-    $saudacao = '';
+    echo $hora = date('H:i:s');
 
     if ($hora >= 00 && $hora <= 5) {
         $saudacao = 'Boa madrugada';
@@ -19,5 +18,13 @@ function saudacao(): string
 
 function resumirTexto(string $texto, int $limite, string $continue = '...'): string //":string" definir tipo de retorno!
 {
-    return $texto . $continue;
+
+    $textoLimpo = trim($texto);
+    if(mb_strlen($textoLimpo) <= $limite){
+        return $textoLimpo;
+    }
+
+    $resumirTexto = mb_substr($textoLimpo, 0, mb_strrpos(mb_substr($textoLimpo, 0, $limite),' '));
+
+    return $resumirTexto.$continue;
 }
