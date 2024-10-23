@@ -1,7 +1,30 @@
 <?php
 
 /**
+ * Formatar valor
+ * @param $valor recebe um número aleatório
+ * @return string número formatado
+ */
+
+ function formatarValor(float $valor = null): string
+ {
+    return number_format(($valor ? $valor : 0), '2', ',', '.');
+ }
+
+ /**
+ * Formatar número com pontos apenas
+ * @param $numero recebe um valor aleatório
+ * @return string número formatado
+ */
+
+ function formatarNumero(string $numero = null): string
+ {
+    return number_format($numero ?:0, '0','.','.');
+ }
+
+/**
  * Saudação ao usuário
+ * @return string saudações
  */
 
 function saudacao2(): string
